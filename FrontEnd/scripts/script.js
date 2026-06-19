@@ -242,7 +242,7 @@ btnValider.addEventListener("click", () => {
     })
     .then(response => response.json())
     .then(newWork => {
-        // Ajouter dans data / Mettre à jour la galerie principale / la galerie de la modale
+        // Ajouter dans data / Mettre à jour la galerie principale et la galerie de la modale
         location.reload();
     });
 });
