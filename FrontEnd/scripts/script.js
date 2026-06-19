@@ -1,4 +1,4 @@
-// Token récupéré depuis le localStorage
+// recuperer token depuis le localStorage
 const token = localStorage.getItem("token");
 
 
