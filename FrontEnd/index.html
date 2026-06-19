@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Sophie Bluel - Architecte d'intérieur</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="./assets/style.css">
+	<script src="https://kit.fontawesome.com/60b1999eb6.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
+	
+</head>
+<body>
+	<!-- Bandeau mode édition - visible uniquement quand admin connecté -->
+	<div class="edit-banner" style="display:none">
+		 <i class="fa-regular fa-pen-to-square"></i> Mode édition
+	</div>
+	<header>
+		<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+		<nav>
+			<ul>
+				<li><a href="#portfolio">projets</a></li>
+				<li><a href="#contact">contact</a></li>
+				<li><a href="login.html" target="_blank">login</a></li>
+				<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="introduction">
+			<figure>
+				<img src="./assets/images/sophie-bluel.png" alt="">
+			</figure>
+			<article>
+				<h2>Designer d'espace</h2>
+				<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
+				<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+				<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
+			</article>
+		</section>
+		<section id="portfolio">
+			<div class="portfolio-header">
+    			<h2>Mes Projets</h2>
+    			<!-- Bouton modifier - visible uniquement quand admin connecté -->
+    			<a href="#" class="modifier" style="display:none">
+					<i class="fa-regular fa-pen-to-square"></i> modifier
+				</a>
+			</div>
+			<div class="filters"></div>
+			<div class="gallery"></div>
+		</section>
+		<section id="contact">
+			<h2>Contact</h2>
+			<p>Vous avez un projet ? Discutons-en !</p>
+			<form action="#" method="post">
+				<label for="name">Nom</label>
+				<input type="text" name="name" id="name">
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email">
+				<label for="message">Message</label>
+				<textarea name="message" id="message" cols="30" rows="10"></textarea>
+				<input type="submit" value="Envoyer">
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<nav>
+			<ul>
+				<li>Mentions Légales</li>
+			</ul>
+		</nav>
+	</footer>
+
+	<!-- Modale -->
+<div id="overlay" style="display:none">
+    <div id="modale">
+
+        <!-- Écran 1 : Galerie -->
+        <div id="modale-galerie">
+            <button class="close-modale">✕</button>
+            <h2>Galerie photo</h2>
+            <div id="modale-gallery"></div>
+            <hr>
+            <button id="btn-ajouter-photo">Ajouter une photo</button>
+        </div>
+
+        <!-- Écran 2 : Formulaire ajout -->
+        <div id="modale-ajout" style="display:none">
+            <button class="btn-retour">←</button>
+            <button class="close-modale">✕</button>
+            <h2>Ajout photo</h2>
+            <div id="upload-zone">
+    			<i class="fa-regular fa-image" id="icone-upload"></i>
+    			<img src="" alt="" id="preview-image" style="display:none">
+    			<label for="photo-input">+ Ajouter photo</label>
+    			<input type="file" id="photo-input" accept="image/jpeg, image/png">
+    			<p>jpg, png : 4mo max</p>
+			</div>
+            <label for="titre">Titre</label>
+            <input type="text" id="titre">
+            <label for="categorie">Catégorie</label>
+            <select id="categorie"></select>
+			<hr>
+            <button id="btn-valider">Valider</button>
+        </div>
+
+    </div>
+</div>
+
+	<script src="./scripts/script.js"></script>
+</body>
+</html>
