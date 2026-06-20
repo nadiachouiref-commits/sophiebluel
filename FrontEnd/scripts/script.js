@@ -164,7 +164,7 @@ overlay.addEventListener("click", (event) => {
     }
 });
 
-// Ouverture de la modale et affichage de l'écran galerie par défaut 
+// Ouverture de la modale et affichage de l'ecran galerie par défaut 
 const btnModifier = document.querySelector(".modifier");
 
 btnModifier.addEventListener("click", () => {
